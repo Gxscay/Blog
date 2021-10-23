@@ -4,12 +4,12 @@
 
 ## Demo
 
-[博客](www.gxscay.com)
+[博客](https://gxscay.com)
 
 ## 🚀 About Me
 
-- **郭霖，19 年毕业，2 年经验的前端小白一枚**
-- **2021 年 5 月加入 新浪微博广告部门。**
+- **郭霖，19 年毕业，两年经验的前端小白一枚**
+- **目前在 新浪微博广告部门。**
   **从事博文推广( Vue )以及负责广告特征平台功能的管理后台从 0 到 1 的搭建以及部署。( Vite + Vue3 )**
 
 ## 🛠 Skills
@@ -18,8 +18,8 @@
 
 ## 🔗 Links
 
-[![微博](https://img.shields.io/badge/weibo-d13a34?style=for-the-badge&logo=sina-weibo&logoColor=white)](https://weibo.com/u/7703459781)
-[![微信](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-95d258?style=for-the-badge&logo=wechat&logoColor=white)](http://49.233.119.95/qr-code/wx/)
+[![微博](https://img.shields.io/badge/weibo-d13a34?style=for-the-badge&logo=sina-weibo&logoColor=white)](https://weibo.com/u/7717048370)
+[![微信](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-95d258?style=for-the-badge&logo=wechat&logoColor=white)](https://gxscay.com/qr-code/wx/)
 
 ## Authors
 
