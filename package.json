@@ -10,14 +10,9 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "7.0.1",
     "lint-staged": "11.1.2",
-    "prettier": "2.3.2"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "prettier"
-    ]
+    "prettier": "2.3.2",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0"
   },
   "husky": {
     "hooks": {
@@ -27,9 +22,5 @@
   },
   "lint-staged": {
     "*.{js,jsx,css,md,ts,tsx}": "prettier --write"
-  },
-  "dependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^13.2.0"
   }
 }
