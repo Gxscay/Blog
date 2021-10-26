@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Gxscay',
-  base: '/blog/',
+  base: '/',
   description: 'Keep on going never give up',
   head: [
     // 添加图标

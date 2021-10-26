@@ -21,8 +21,8 @@ jobs:
         # 使用 actions 库， actions/setup-node 安装 Node
         uses: actions/setup-node@v1
         with:
-          # 版本需要 大于14~
-          node-version: 14.0.0
+          # 版本需要 大于14~ 指定 Node 版本 14.18.1
+          node-version: 14.18.1
 
       # 标注一下，经过测试，这种方式没用，进入 client(React) 目录...
       # - name: 进入 client 项目
@@ -67,4 +67,4 @@ jobs:
           # 目标地址
           TARGET: "/code/"
           # 排除 node_modules ~
-          EXCLUDE: "/**/node_modules/"
+          EXCLUDE: "/**/node_modules/, /node_modules/"
