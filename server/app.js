@@ -14,7 +14,6 @@ const cors = require("koa2-cors");
 const { port, mongoURL: db } = require("./config");
 const routes = require("./routes");
 
-// error handler
 onerror(app);
 
 // middlewares
