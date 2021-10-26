@@ -7,4 +7,4 @@ COPY . /app
 WORKDIR /app
 RUN npm install
 EXPOSE 3333
-CMD npm run server
+CMD npm run start
