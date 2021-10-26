@@ -28,20 +28,24 @@ jobs:
       # - name: 进入 client 项目
       #   run: cd client
 
+      # 安装依赖 - MainBox
+      - name: MainBox - 安装依赖
+        run: npm install
+
       # 安装依赖 - PC
-      - name: 安装依赖
+      - name: client - 安装依赖
         run: cd client && npm install
 
       # 打包 - PC
-      - name: 打包
+      - name: client - 打包
         run: cd client && npm run build
 
       # 安装依赖 - Mobile
-      - name: 安装依赖
+      - name: mobile - 安装依赖
         run: cd mobile && npm install
 
       # 打包 - Mobile
-      - name: 打包
+      - name: mobile - 打包
         run: cd mobile && npm run build
 
       # 上传腾讯云
