@@ -24,6 +24,10 @@ const server = http.createServer((req, res) => {
       let signature = req.headers["x-hub-signature"]; // 签名 就是 设置的 密钥
 
       if (signature !== sign(body)) {
+        console.log(
+          "%c 🥝 object123333: ",
+          "font-size:20px;background-color: #ED9EC7;color:#fff;"
+        );
         return res.end("Not Allowed");
       }
       console.log(
