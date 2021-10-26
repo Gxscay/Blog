@@ -7,12 +7,18 @@ git reset --hard origin/main
 git clean -f
 echo "拉取最新代码"
 git pull origin main
+# --------------------------------------------------------
+echo "停掉监听"
+echo "开启监听"
+npm run sprd
+npm run prd
+# --------------------------------------------------------
 echo "开始执行构建"
-docker build -t blog-server:1.0 .
+# docker build -t blog-server:1.0 .
 echo "停止并删除旧容器"
-docker stop blog-server-container
-docker rm blog-server-container
+# docker stop blog-server-container
+# docker rm blog-server-container
 echo "启动新容器"
 # 端口映射 宿主机 - 映射到 - 容器内容的 3333端口
 # -d 后台运行
-docker container run -p 3333:3333 --name blog-server-container -d blog-server:1.0
+# docker container run -p 3333:3333 --name blog-server-container -d blog-server:1.0
