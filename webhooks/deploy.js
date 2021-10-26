@@ -24,24 +24,12 @@ const server = http.createServer((req, res) => {
       let signature = req.headers["x-hub-signature"]; // 签名 就是 设置的 密钥
 
       if (signature !== sign(body)) {
-        console.log(
-          "%c 🥝 object123333: ",
-          "font-size:20px;background-color: #ED9EC7;color:#fff;"
-        );
         return res.end("Not Allowed");
       }
-      console.log(
-        "%c 🥝 object12: ",
-        "font-size:20px;background-color: #ED9EC7;color:#fff;"
-      );
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify({ ok: true }));
       if (event === "push") {
         // 开始部署   部署脚本
-        console.log(
-          "%c 🥝 object1: ",
-          "font-size:20px;background-color: #ED9EC7;color:#fff;"
-        );
         let payload = JSON.parse(body); // 拿到 body
         // 这里就是执行 脚本名称  可以进行替换 🍓🍓🍓 - 这里就可以 监听多个了
         let child = spawn("sh", [`./server.sh`]); // 开启子进程 执行脚本~
@@ -49,10 +37,6 @@ const server = http.createServer((req, res) => {
         child.stdout.on("data", (buffer) => {
           buffers.push(buffer);
         });
-        console.log(
-          "%c 🥝 object3: ",
-          "font-size:20px;background-color: #ED9EC7;color:#fff;"
-        );
         child.stdout.on("end", () => {
           let logs = Buffer.concat(buffers).toString();
           const text = `
