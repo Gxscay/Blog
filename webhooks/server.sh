@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_PATH='/code/Blog/server'
+WORK_PATH='/code/Blog/server/'
 cd $WORK_PATH
 echo "清除老代码"
 # 硬回退 - 清缓存
