@@ -44,6 +44,11 @@ const server = http.createServer((req, res) => {
         console.log("5");
         child.stdout.on("end", () => {
           let logs = Buffer.concat(buffers).toString();
+          console.log(
+            "%c 🍷 logs: ",
+            "font-size:20px;background-color: #E41A6A;color:#fff;",
+            logs
+          );
           const text = `
           <h1>部署日期： ${new Date()}</h1>
           <h1>部署人： ${payload.pusher.name}</h1>
