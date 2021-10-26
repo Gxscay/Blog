@@ -18,7 +18,6 @@ const server = http.createServer((req, res) => {
       buffers.push(buffer);
     });
     req.on("end", () => {
-      console.log("1");
       let body = Buffer.concat(buffers);
       let event = req.headers["x-github-event"]; // event = push; 请求头
       // github 请求来的时候 要传递请求体 另外还会传递一个 signature 过来 需要验证signature
@@ -27,28 +26,19 @@ const server = http.createServer((req, res) => {
       if (signature !== sign(body)) {
         return res.end("Not Allowed");
       }
-      console.log("2");
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify({ ok: true }));
       if (event === "push") {
-        console.log("3");
         // 开始部署   部署脚本
         let payload = JSON.parse(body); // 拿到 body
         // 这里就是执行 脚本名称  可以进行替换 🍓🍓🍓 - 这里就可以 监听多个了
         let child = spawn("sh", [`./server.sh`]); // 开启子进程 执行脚本~
         let buffers = [];
-        console.log("4");
         child.stdout.on("data", (buffer) => {
           buffers.push(buffer);
         });
-        console.log("5");
         child.stdout.on("end", () => {
           let logs = Buffer.concat(buffers).toString();
-          console.log(
-            "%c 🍷 logs: ",
-            "font-size:20px;background-color: #E41A6A;color:#fff;",
-            logs
-          );
           const text = `
           <h1>部署日期： ${new Date()}</h1>
           <h1>部署人： ${payload.pusher.name}</h1>
@@ -58,11 +48,6 @@ const server = http.createServer((req, res) => {
           }</h1>
           <h1>提交信息： ${logs.replace("\r\n", "<br />")}</h1>
           `;
-          console.log(
-            "%c 🍟 text: ",
-            "font-size:20px;background-color: #42b983;color:#fff;",
-            text
-          );
         });
       }
     });
