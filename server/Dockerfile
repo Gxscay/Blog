@@ -1,4 +1,4 @@
-FROM node
+FROM node:14.17.1-alpine3.13
 LABEL name="blog-server"
 LABEL version="1.0"
 # 将当前容器里面的代码 拷贝到 新建基于 node 容器里面 /app 目录下
