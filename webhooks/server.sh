@@ -18,6 +18,6 @@ npm run prd
 # docker stop blog-server-container
 # docker rm blog-server-container
 # echo "启动新容器"
-# # 端口映射 宿主机 - 映射到 - 容器内容的 3333端口
+# # 端口映射 宿主机 - 映射到 - 容器的3333端口
 # # -d 后台运行
 # docker container run -p 3333:3333 --name blog-server-container -d blog-server:1.0
